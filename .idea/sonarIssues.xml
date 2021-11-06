@@ -18,6 +18,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/build/reports/tests/test/index.html">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/com/co/nisum/user/UserApplication.java">
           <value>
             <set />
@@ -84,6 +89,31 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/resources/data.sql">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/test/java/com/co/nisum/user/UserApplicationTests.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/test/java/com/co/nisum/user/config/UserConfigTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/test/java/com/co/nisum/user/controller/UserControllerTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/test/java/com/co/nisum/user/service/UserServiceImplTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/test/java/com/co/nisum/user/util/GeneralUtilTest.java">
           <value>
             <set />
           </value>

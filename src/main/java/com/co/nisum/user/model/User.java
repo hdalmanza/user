@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 import java.util.Set;
 
 
@@ -28,7 +29,7 @@ public class User implements Serializable {
     @Column(name = "password")
     private String password;
     @OneToMany(cascade = CascadeType.ALL,orphanRemoval = true)
-    private Set<Phone> phones;
+    private List<Phone> phones;
     @Column(name = "created")
     private String created;
     @Column(name = "modified")

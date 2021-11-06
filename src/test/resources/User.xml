@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="27932e09-b458-4f6d-a48a-a701ca6ade98" activeEnvironment="Default" name="User" resourceRoot="" soapui-version="5.6.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="7a278c43-af65-4e4f-8ccb-34881d8a8fca" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:8080" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://localhost:8080</con:endpoint></con:endpoints><con:resource name="Create" path="/user/create" id="de57d65e-7217-4d9a-b6f0-172a24487d69"><con:settings/><con:parameters/><con:method name="Create 1" id="3b643603-f099-4fdc-ab8f-1c4641ade466" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>500 400</con:status><con:params/><con:element xmlns:cre="http://localhost/user/create">cre:Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:cre="http://localhost/user/create">cre:Response</con:element></con:representation><con:request name="Request 1" id="94872ce8-206a-4ea6-beac-775321d3953a" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request>{
+"name": "Juan Rodriguez",
+"email": "juanro@driguez.org9",
+"password": "2Rhh1",
+"phones": [
+{
+"number": "1234567",
+"citycode": "1",
+"contrycode": "57"
+},
+{
+"number": "234234234",
+"citycode": "1",
+"contrycode": "57"
+}
+]
+}
+</con:request><con:originalUri>http://localhost/user/create</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:testSuite id="5daa952c-34f1-404b-8ba1-e2fbb8d2130c" name="Create"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="196b3f1d-ee4c-4875-9061-7db6a07950e9" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Prueba cuando la contraseña es invalida" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="CallService" id="ce6c7a76-4108-4591-be59-df24a3cd4a7c"><con:settings/><con:config service="http://localhost:8080" resourcePath="/user/create" methodName="Create 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="CallService" id="94872ce8-206a-4ea6-beac-775321d3953a" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request>{
+"name": "Juan Rodriguez",
+"email": "juanro@driguez.org9",
+"password": "2Rhhwqe",
+"phones": [
+{
+"number": "1234567",
+"citycode": "1",
+"contrycode": "57"
+},
+{
+"number": "234234234",
+"citycode": "1",
+"contrycode": "57"
+}
+]
+}
+</con:request><con:originalUri>http://localhost/user/create</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="98cf4c7b-2f1a-4ca2-9a3a-f4875835e2ba" name="Valid HTTP Status Codes"><con:configuration><codes>400</codes></con:configuration></con:assertion><con:assertion type="Simple Contains" id="1f381d33-faea-42b6-8925-dfb62c613b1e" name="Contains"><con:configuration><token>mensaje</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="4aff59e8-e920-44db-a20a-4dd117df5dc3" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Prueba cuando el correo es invalido" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="CallService" id="16309e0a-67bf-4b0c-9d68-ab2f3259fca4"><con:settings/><con:config service="http://localhost:8080" resourcePath="/user/create" methodName="Create 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="CallService" id="94872ce8-206a-4ea6-beac-775321d3953a" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request>{
+"name": "Juan Rodriguez",
+"email": "juanrodriguez.org",
+"password": "2Rhhwqe2",
+"phones": [
+{
+"number": "1234567",
+"citycode": "1",
+"contrycode": "57"
+},
+{
+"number": "234234234",
+"citycode": "1",
+"contrycode": "57"
+}
+]
+}
+</con:request><con:originalUri>http://localhost/user/create</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="98cf4c7b-2f1a-4ca2-9a3a-f4875835e2ba" name="Valid HTTP Status Codes"><con:configuration><codes>400</codes></con:configuration></con:assertion><con:assertion type="Simple Contains" id="1f381d33-faea-42b6-8925-dfb62c613b1e" name="Contains"><con:configuration><token>mensaje</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="edb767a1-60af-4daf-afaa-5c35d23144a4" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Prueba Crear" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Groovy Script Crear correo" id="00862c83-f43d-46ff-b33a-f8a7aef5956c"><con:settings/><con:config><script>import org.apache.commons.lang.RandomStringUtils
+testRunner.testCase.setPropertyValue('email', RandomStringUtils.randomNumeric(4))
+
+
+
+
+</script></con:config></con:testStep><con:testStep type="restrequest" name="Crear usuario" id="49555c3b-cc85-407c-a082-63711edc08c3"><con:settings/><con:config service="http://localhost:8080" resourcePath="/user/create" methodName="Create 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Crear usuario" id="94872ce8-206a-4ea6-beac-775321d3953a" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request>{
+"name": "Juan Rodriguez",
+"email": "juanro${#TestCase#email}@driguez.org",
+"password": "2Rhh1",
+"phones": [
+{
+"number": "1234567",
+"citycode": "1",
+"contrycode": "57"
+},
+{
+"number": "234234234",
+"citycode": "1",
+"contrycode": "57"
+}
+]
+}
+</con:request><con:originalUri>http://localhost/user/create</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="ca44ccbc-72b5-41b6-995a-58effa33ee2a" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="ffbf2dbe-dd66-4a76-8b0d-13bcd73cbbf1" name="Is Active"><con:configuration><path>$.isActive</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Usuario existe" id="d5d42aaf-235d-4967-abcf-e30d27bd25b5"><con:settings/><con:config service="http://localhost:8080" resourcePath="/user/create" methodName="Create 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Usuario existe" id="94872ce8-206a-4ea6-beac-775321d3953a" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8080</con:endpoint><con:request>{
+"name": "Juan Rodriguez",
+"email": "juanro${#TestCase#email}@driguez.org",
+"password": "2Rhh1",
+"phones": [
+{
+"number": "1234567",
+"citycode": "1",
+"contrycode": "57"
+},
+{
+"number": "234234234",
+"citycode": "1",
+"contrycode": "57"
+}
+]
+}
+</con:request><con:originalUri>http://localhost/user/create</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="ca44ccbc-72b5-41b6-995a-58effa33ee2a" name="Valid HTTP Status Codes"><con:configuration><codes>500</codes></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="ffbf2dbe-dd66-4a76-8b0d-13bcd73cbbf1" name="validateMensaje"><con:configuration><path>$.mensaje</path><content>El correo ya registrado</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties><con:property><con:name>TransID</con:name><con:value>0</con:value></con:property><con:property><con:name>email</con:name><con:value>4537</con:value></con:property></con:properties></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
