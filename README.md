@@ -89,8 +89,8 @@ Ejemplo de response:
 
 | Plugin | README |
 | ------ | ------ |
-| Postman | [https://www.postman.com/downloads/][PlDb] |
-| Soap UI | [https://www.soapui.org/downloads/soapui/][PlGh] |
-| Jmeter | [https://jmeter.apache.org/download_jmeter.cgi][PlGd] |
-| Docker | [https://www.docker.com/products/docker-desktop][PlOd] |
+| Postman | [https://www.postman.com/downloads/] |
+| Soap UI | [https://www.soapui.org/downloads/soapui/] |
+| Jmeter | [https://jmeter.apache.org/download_jmeter.cgi] |
+| Docker | [https://www.docker.com/products/docker-desktop] |
 
