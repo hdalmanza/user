@@ -27,8 +27,8 @@ public class Phone implements Serializable {
     @Column(name = "cityCode")
     private String cityCode;
     @JsonProperty("contrycode")
-    @Column(name = "contryCode")
-    private String contryCode;
+    @Column(name = "countryCode")
+    private String countryCode;
 
 
 }

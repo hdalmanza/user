@@ -23,4 +23,12 @@
 hs_err_pid*
 .gradle/
 **/.gradle/
+**/.gradle
 build/
+build
+**/build/
+**/build
+.idea/
+**/.idea/
+**/.idea
+.idea/

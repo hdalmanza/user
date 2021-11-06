@@ -31,7 +31,7 @@ public class UserController {
         try {
             response = userService.create(user);
         }catch (Exception exception){
-            new ResponseEntity<>( generalUtil.buildMessage("Error" + exception.getMessage()),
+            new ResponseEntity<>( generalUtil.buildMessage("Error " + exception.getMessage()),
                     HttpStatus.INTERNAL_SERVER_ERROR);
         }
         return response;

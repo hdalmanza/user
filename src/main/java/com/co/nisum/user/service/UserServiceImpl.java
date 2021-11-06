@@ -39,7 +39,6 @@ public class UserServiceImpl implements UserService {
             return new ResponseEntity<>( generalUtil.buildMessage(parameter.invalidEmail),
                     HttpStatus.BAD_REQUEST);
         }
-       ;
         if(!user.getPassword().matches(parameter.regexPassword)){
             return new ResponseEntity<>( generalUtil.buildMessage(parameter.invalidPassword),
                     HttpStatus.BAD_REQUEST);
@@ -59,7 +58,7 @@ public class UserServiceImpl implements UserService {
         user.setCreated(date);
         user.setModified(date);
         user.setLast_login(date);
-        user.setIsactive(true);
+        user.setActive(true);
     }
 
 

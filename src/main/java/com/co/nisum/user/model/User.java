@@ -1,17 +1,13 @@
 package com.co.nisum.user.model;
 
 
-import lombok.*;
-import org.springframework.validation.annotation.Validated;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import javax.validation.Valid;
-import javax.validation.constraints.Email;
-import javax.validation.constraints.Max;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
 import java.io.Serializable;
-import java.util.List;
 import java.util.Set;
 
 
@@ -24,7 +20,6 @@ import java.util.Set;
 public class User implements Serializable {
 
     @Id
-    //@GeneratedValue(strategy = GenerationType.AUTO)
     private  String id;
     @Column(name = "name")
     private String name;
@@ -42,6 +37,6 @@ public class User implements Serializable {
     private  String last_login;
     @Column(name = "token")
     private String token;
-    @Column(name = "isactive")
-    private  boolean isactive;
+    @Column(name = "isActive")
+    private  boolean isActive;
 }
