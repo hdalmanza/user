@@ -83,3 +83,14 @@ Ejemplo de response:
 - Diagrama de secuencia User\documentation\diagrama de secuencia.png
 - Diagrama de componente User\documentation\diagrama de componente.png
 - Diagrama de base de datos User\documentation\diagrama de base de datos.png
+
+
+## URLs
+
+| Plugin | README |
+| ------ | ------ |
+| Postman | [https://www.postman.com/downloads/][PlDb] |
+| Soap UI | [https://www.soapui.org/downloads/soapui/][PlGh] |
+| Jmeter | [https://jmeter.apache.org/download_jmeter.cgi][PlGd] |
+| Docker | [https://www.docker.com/products/docker-desktop][PlOd] |
+
