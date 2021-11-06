@@ -79,4 +79,7 @@ Ejemplo de response:
 - Jmeter para las pruebas de performance.  User\src\test\resources\UserPerformance.jmx
 - Docker para contenerizar el servicio. User\docker\Dockerfile
 - Script sql para la base de datos H2  User\src\main\resources\data.sql
-- Manual Paso a Paso User\src\main\resources\Manual de Adecuación de Ambiente y Ejecución.docx
+- Manual Paso a Paso User\documentation\Manual de Adecuación de Ambiente y Ejecución.docx
+- Diagrama de secuencia User\documentation\diagrama de secuencia.png
+- Diagrama de componente User\documentation\diagrama de componente.png
+- Diagrama de base de datos User\documentation\diagrama de base de datos.png
