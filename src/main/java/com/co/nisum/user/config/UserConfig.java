@@ -17,7 +17,7 @@ public class UserConfig {
 
     @Bean
     public SimpleDateFormat simpleDateFormat(){
-        String pattern = parameter.getPatternDateFormat();
+        String pattern = parameter.patternDateFormat;
         return new SimpleDateFormat(pattern);
     }
 

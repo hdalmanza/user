@@ -1,16 +1,13 @@
 package com.co.nisum.user.util;
 
+import com.auth0.jwt.JWT;
+import com.auth0.jwt.JWTCreator;
+import com.auth0.jwt.algorithms.Algorithm;
 import com.google.gson.JsonObject;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.stereotype.Component;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.List;
-import java.util.stream.Collectors;
-import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
 
 @Component
 public class GeneralUtil {
@@ -26,27 +23,32 @@ public class GeneralUtil {
 
     public String buildMessage(String info){
         JsonObject message = new JsonObject();
-        message.addProperty(parameter.getLabelMessage(), info);
+        message.addProperty(parameter.labelMessage, info);
         return message.toString();
     }
 
 
     public String getJwtToken(String username){
-        String secretKey = parameter.getSecretKey();
-        List<GrantedAuthority> grantedAuthorities = AuthorityUtils
-                .commaSeparatedStringToAuthorityList(parameter.getJwtRol());
-        return Jwts
-                .builder()
-                .setId(parameter.getJwtId())
-                .setSubject(username)
-                .claim(parameter.getJwtAuthorities(),
-                        grantedAuthorities.stream()
-                                .map(GrantedAuthority::getAuthority)
-                                .collect(Collectors.toList()))
-                .setIssuedAt(new Date(System.currentTimeMillis()))
-         //       .setExpiration(new Date(System.currentTimeMillis() + 600000))
-                .signWith(SignatureAlgorithm.HS512,
-                        secretKey.getBytes()).compact();
+        String secretKey = parameter.secretKey;
+
+        JWTCreator.Builder builder = JWT.create()
+                .withSubject(username)
+                .withIssuedAt(new Date());
+            //    .withExpiresAt(DateUtil.plus(config.getExpires().toMillis())
+              //  );
+
+
+
+      /*  if (null != claims && !claims.isEmpty()) {
+            claims.forEach((key, value) -> {
+                addClaim(builder, key, value);
+            });
+        }
+*/
+        return builder.sign(Algorithm.HMAC256(secretKey));
+
+
+
 
     }
 

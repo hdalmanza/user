@@ -4,40 +4,44 @@ package com.co.nisum.user.model;
 import lombok.*;
 import org.springframework.validation.annotation.Validated;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.Valid;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
+import java.io.Serializable;
 import java.util.List;
-
-
+import java.util.Set;
 
 
 @Builder
-@Getter
-@Setter
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
-public class User {
+@Table(name = "user")
+public class User implements Serializable {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
-    private  Integer id;
+    //@GeneratedValue(strategy = GenerationType.AUTO)
+    private  String id;
+    @Column(name = "name")
     private String name;
-  //  @Pattern(regexp = "^(.+)@(.+)$", message = "el campo email no es valido")
-   // @Email(message = "Email should be valid")
+    @Column(name = "email")
     private String email;
-    //@Pattern(regexp = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–[{}]:;',?/*~$^+=<>]).{8,20}$", message = "el campo password no es valido")
+    @Column(name = "password")
     private String password;
-    private List<Phone> phones;
-
+    @OneToMany(cascade = CascadeType.ALL,orphanRemoval = true)
+    private Set<Phone> phones;
+    @Column(name = "created")
     private String created;
+    @Column(name = "modified")
     private String modified;
+    @Column(name = "last_login")
     private  String last_login;
+    @Column(name = "token")
     private String token;
+    @Column(name = "isactive")
     private  boolean isactive;
 }

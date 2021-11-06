@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
+
 
 @RestController
 public class UserController {
@@ -24,13 +26,13 @@ public class UserController {
 
     @PostMapping(value = "/create", produces = MediaType.APPLICATION_JSON_VALUE,
             consumes = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Object> createUser(@RequestBody User user){
+    public ResponseEntity<Object> createUser(@RequestBody @Valid User user){
         ResponseEntity<Object> response = null;
         try {
             response = userService.create(user);
         }catch (Exception exception){
             new ResponseEntity<>( generalUtil.buildMessage("Error" + exception.getMessage()),
-                    HttpStatus.FAILED_DEPENDENCY);
+                    HttpStatus.INTERNAL_SERVER_ERROR);
         }
         return response;
     }

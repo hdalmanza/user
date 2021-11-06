@@ -1,39 +1,35 @@
 package com.co.nisum.user.util;
 
-import lombok.Getter;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
-@Getter
 public class Parameter {
 
-    @Value("${message.exist.user}")
-    private String messageUserExist;
     @Value("${message.exist.email}")
-    private String messageEmailExist;
+    public String messageEmailExist;
     @Value("${message.invalid.email}")
-    private String invalidEmail;
+    public String invalidEmail;
     @Value("${message.invalid.password}")
-    private String invalidPassword;
+    public String invalidPassword;
 
     @Value("${label.message}")
-    private String labelMessage;
+    public String labelMessage;
 
     @Value("${parameter.secret.key}")
-    private String secretKey;
+    public String secretKey;
     @Value("${parameter.jwt.id}")
-    private String jwtId;
+    public String jwtId;
     @Value("${parameter.jwt.rol}")
-    private String jwtRol;
+    public String jwtRol;
     @Value("${parameter.jwt.claim.authorities}")
-    private String jwtAuthorities;
+    public String jwtAuthorities;
     @Value("${parameter.pattern.date.format}")
-    private String patternDateFormat;
+    public String patternDateFormat;
     @Value("${parameter.regex.email}")
-    private String regexEmail;
+    public String regexEmail;
     @Value("${parameter.regex.password}")
-    private String regexPassword;
+    public String regexPassword;
 
 
 }
